@@ -1,30 +1,522 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Scroll Reveal</title>
-  <link rel="stylesheet" href="/CSS/Style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Scoperte Geografiche — Colonizzazione, Sterminio e Conseguenze</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/CSS/Style.css">
 </head>
 <body>
- 
-  <div class="bg-photo"></div>
- 
-  <!-- NAVBAR — compare quando il nero sparisce -->
-  <header class="navbar" id="navbar">
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Chi siamo</a>
-      <a href="#">Servizi</a>
-      <a href="#">Contatti</a>
-    </nav>
-  </header>
- 
-  <!-- I 4 pannelli neri -->
-  <div class="panel panel-top"    id="panelTop"></div>
-  <div class="panel panel-bottom" id="panelBottom"></div>
-  <div class="panel panel-left"   id="panelLeft"></div>
-  <div class="panel panel-right"  id="panelRight"></div>
-  <script src="/Javascript/script.js"></script>
+<!-- NAVBAR -->
+<nav>
+  <span class="nav-brand">Scoperte Geografiche</span>
+  <ul>
+    <li><a href="#hero">Intro</a></li>
+    <li><a href="#timeline">Cronologia</a></li>
+    <li><a href="#colonizzazione">Colonizzazione</a></li>
+    <li><a href="#sfruttamento">Sfruttamento</a></li>
+    <li><a href="#scambio">Scambio</a></li>
+    <li><a href="#chiesa">Chiesa</a></li>
+    <li><a href="#tratta">Tratta</a></li>
+    <li><a href="#voci">Voci</a></li>
+    <li><a href="#curiosita">Curiosità</a></li>
+    <li><a href="#glossario">Glossario</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-map"></div>
+  <div style="position:relative; z-index:2;">
+    <p class="hero-subtitle">XV — XVII Secolo</p>
+    <div class="hero-ornament"></div>
+    <h1 class="hero-title">Le Scoperte<br>Geografiche</h1>
+    <div class="hero-ornament"></div>
+    <p class="hero-desc">Colonizzazione, sterminio e conseguenze. Un viaggio attraverso uno dei periodi più trasformativi — e più tragici — della storia umana.</p>
+  </div>
+  <div class="hero-scroll">↓ Scorri ↓</div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="section-header">
+    <p class="section-tag">Dal 1400 al 1600</p>
+    <h2 class="section-title" style="color:var(--parchment);">Cronologia degli eventi</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="timeline-track">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-year">1453</div>
+        <div class="timeline-text">La caduta di Costantinopoli blocca le rotte commerciali verso l'Asia, spingendo l'Europa a cercare nuove vie marittime.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-year">1488</div>
+        <div class="timeline-text">Bartolomeu Dias doppia il Capo di Buona Speranza, aprendo la rotta atlantica verso l'Asia per i Portoghesi.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-year">1492</div>
+        <div class="timeline-text">Cristoforo Colombo raggiunge i Caraibi. L'Europa entra per la prima volta in contatto con il continente americano.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-year">1494</div>
+        <div class="timeline-text">Il Trattato di Tordesillas divide il mondo tra Spagna e Portogallo, stabilendo le sfere di influenza dei due regni.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-year">1519–1521</div>
+        <div class="timeline-text">Hernán Cortés conquista l'Impero Azteco in Messico. Inizio del crollo demografico delle popolazioni indigene.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-year">1532–1533</div>
+        <div class="timeline-text">Francisco Pizarro conquista l'Impero Inca in Sud America. La colonizzazione spagnola si estende su tutto il continente.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-year">1542</div>
+        <div class="timeline-text">Bartolomé de Las Casas pubblica la <em>Brevísima relación de la destrucción de las Indias</em>, denunciando gli orrori della colonizzazione alle corti europee.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-year">1550–1551</div>
+        <div class="timeline-text">Il dibattito di Valladolid: Las Casas si scontra con Sepúlveda sulla natura degli indigeni. Prima grande disputa europea sui diritti umani.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-year">XVI–XIX sec.</div>
+        <div class="timeline-text">La tratta atlantica degli schiavi deporta oltre 12 milioni di africani nelle Americhe. Uno dei crimini più grandi della storia umana.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLONIZZAZIONE -->
+<section id="colonizzazione" class="section-wrapper">
+  <div class="inner">
+    <div class="section-header" style="text-align:left; margin-bottom:2.5rem;">
+      <p class="section-tag" style="color:var(--bordeaux);">Dalle scoperte alla colonizzazione</p>
+      <h2 class="heading">La conquista e la distruzione<br>delle civiltà indigene</h2>
+      <div class="divider" style="margin-left:0;"></div>
+    </div>
+    <div class="two-col reveal">
+      <div>
+        <p>Alla fine del Quattrocento l'Europa stava vivendo un periodo di grandi cambiamenti. Il desiderio di trovare nuove rotte commerciali verso l'Asia spinse molti esploratori a partire per viaggi rischiosi e sconosciuti. Fu proprio così che avvennero le grandi scoperte geografiche, che portarono gli europei a entrare in contatto con nuovi continenti, in particolare l'America.</p>
+        <p>Le prime potenze a muoversi furono Spagna e Portogallo. Successivamente parteciparono anche Inghilterra, Francia e Olanda, dando inizio a una competizione tra stati europei per il controllo del mondo.</p>
+        <div class="pull-quote">
+          I conquistadores spagnoli, spesso pochi ma ben organizzati, riuscirono in tempi brevissimi a sottomettere enormi territori, dando origine a un dominio che sarebbe durato per secoli.
+        </div>
+      </div>
+      <div>
+        <p>Gli europei si trovarono davanti a civiltà molto sviluppate: quella degli Aztechi in Messico e degli Inca in Sud America, con città, sistemi politici organizzati e conoscenze avanzate in agricoltura e architettura.</p>
+        <p>Nonostante ciò, furono sconfitte in poco tempo. Tre fattori decisero le sorti: le armi più avanzate (archibugi e cannoni), l'uso dei cavalli (completamente sconosciuti in America) e le rivalità tra i popoli indigeni, sfruttate dagli europei. Un ruolo decisivo lo ebbero anche le <strong>malattie europee</strong>, come il vaiolo, contro cui gli indigeni non avevano difese immunitarie.</p>
+        <div class="stat-block">
+          <div class="stat-card">
+            <span class="stat-number">-90%</span>
+            <span class="stat-label">Calo popolazione indigena in alcune regioni</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">~50M</span>
+            <span class="stat-label">Morti indigene nel XVI secolo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SFRUTTAMENTO -->
+<section id="sfruttamento" class="section-wrapper dark">
+  <div class="inner">
+    <div class="section-header" style="text-align:left; margin-bottom:2.5rem;">
+      <p class="section-tag" style="color:var(--bordeaux);">L'organizzazione delle colonie</p>
+      <h2 class="heading">Lo sfruttamento e lo sterminio<br>degli indios</h2>
+      <div class="divider" style="margin-left:0;"></div>
+    </div>
+    <div class="two-col reveal">
+      <div>
+        <p>Dopo la conquista, gli europei iniziarono a organizzare i territori in colonie, creando strutture di governo per controllare e sfruttare le nuove terre. La Spagna divise i suoi possedimenti in <strong>vicereami</strong>, come quello della Nuova Spagna e del Perù, governati da funzionari che rappresentavano direttamente il re.</p>
+        <p>Le città furono costruite seguendo modelli europei: piazze, chiese ed edifici amministrativi divennero centri di potere. Gli europei imposero la loro lingua, le loro leggi e le loro abitudini, trasformando profondamente le società locali.</p>
+        <p>Un altro elemento fondamentale fu la diffusione del cristianesimo: missionari e religiosi cercarono di convertire gli indigeni, spesso senza rispettare le loro tradizioni. In molti casi, le religioni locali vennero proibite o distrutte.</p>
+      </div>
+      <div>
+        <h3 class="subheading" style="margin-top:0;">L'encomienda</h3>
+        <p>Uno degli aspetti più tragici fu lo sfruttamento del lavoro indigeno tramite il sistema dell'<em>encomienda</em>: gruppi di indigeni venivano affidati a coloni europei, obbligandoli a lavorare in condizioni durissime in cambio di una presunta protezione e istruzione religiosa. In realtà, si trattava spesso di una forma di schiavitù.</p>
+        <p>Nelle miniere d'argento come quella di <strong>Potosí</strong> (nell'attuale Bolivia), gli indigeni lavoravano turni massacranti di 12-16 ore al giorno, esposti ai gas tossici del mercurio usato per raffinare l'argento. La malnutrizione e le punizioni fisiche erano quotidiane. Si stima che solo a Potosí morirono oltre 8 milioni di persone nel corso dei secoli di sfruttamento.</p>
+        <div class="pull-quote">
+          Il risultato fu una catastrofe demografica: in alcune regioni, la popolazione indigena diminuì fino al 90%. Milioni di persone morirono in pochi decenni.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCAMBIO COLOMBIANO -->
+<section id="scambio" class="section-wrapper">
+  <div class="inner">
+    <div class="section-header" style="text-align:left; margin-bottom:2.5rem;">
+      <p class="section-tag" style="color:var(--bordeaux);">L'incontro tra mondi diversi</p>
+      <h2 class="heading">Lo scambio colombiano<br>e i cambiamenti economici</h2>
+      <div class="divider" style="margin-left:0;"></div>
+    </div>
+    <div class="two-col reveal">
+      <div>
+        <p>Le scoperte geografiche portarono per la prima volta a un contatto diretto tra popolazioni di continenti diversi. Questo incontro diede origine a uno scambio globale di prodotti, animali, piante e conoscenze, noto come <strong>"scambio colombiano"</strong>.</p>
+        <p>Dall'America arrivarono in Europa alimenti fondamentali come <strong>patate, mais, pomodori e cacao</strong>, che cambiarono profondamente l'alimentazione europea. Dall'Europa, invece, arrivarono animali come cavalli e bovini, oltre a nuove tecnologie.</p>
+        <p>Tuttavia, questo incontro non fu equilibrato: gli europei imposero il loro dominio, trasformando profondamente le società indigene.</p>
+        <div class="pull-quote">
+          Molti storici considerano questo periodo come l'inizio della globalizzazione, perché per la prima volta il mondo diventò davvero interconnesso.
+        </div>
+      </div>
+      <div>
+        <h3 class="subheading" style="margin-top:0;">I cambiamenti economici</h3>
+        <p>Le scoperte geografiche cambiarono completamente l'economia mondiale. Il centro dei commerci si spostò dal <strong>Mediterraneo all'Oceano Atlantico</strong>, favorendo paesi come Spagna, Portogallo, Inghilterra e Olanda.</p>
+        <p>Le enormi quantità di oro e argento provenienti dalle Americhe arricchirono l'Europa e contribuirono allo sviluppo del capitalismo. Si iniziò a parlare di un vero e proprio mercato mondiale, in cui merci e risorse circolavano tra continenti.</p>
+        <p>Le colonie, però, venivano sfruttate principalmente come fonte di materie prime e manodopera, senza uno sviluppo autonomo.</p>
+        <div class="stat-block">
+          <div class="stat-card">
+            <span class="stat-number">16.000t</span>
+            <span class="stat-label">Argento estratto da Potosí nel XVI-XVII sec.</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">200+</span>
+            <span class="stat-label">Nuove specie vegetali introdotte in Europa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMERCIO TRIANGOLARE -->
+<section style="background: rgba(26,15,0,0.05); padding: 5rem 2rem;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-header" style="text-align:left; margin-bottom:2.5rem;">
+      <p class="section-tag" style="color:var(--bordeaux);">Il commercio triangolare</p>
+      <h2 class="heading">Tre continenti, un sistema<br>di sfruttamento globale</h2>
+      <div class="divider" style="margin-left:0;"></div>
+    </div>
+    <div class="reveal">
+      <p style="max-width:800px; margin-bottom:2rem;">Il commercio triangolare era un sistema di scambi che collegava tre continenti in un ciclo continuo di sfruttamento. Non era uno scambio equo: era una macchina economica costruita sulla sofferenza umana.</p>
+      <svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:700px; display:block; margin:0 auto; height:auto;">
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#c4922a"/>
+          </marker>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <rect width="700" height="420" fill="#1a0f00" rx="8"/>
+        <ellipse cx="350" cy="70" rx="90" ry="45" fill="rgba(196,146,42,0.15)" stroke="#c4922a" stroke-width="1.5"/>
+        <text x="350" y="65" text-anchor="middle" fill="#e8b84b" font-family="serif" font-size="14" font-weight="bold">EUROPA</text>
+        <text x="350" y="85" text-anchor="middle" fill="#d4b896" font-family="serif" font-size="11" font-style="italic">Armi, tessuti, alcol</text>
+        <ellipse cx="130" cy="300" rx="90" ry="45" fill="rgba(196,146,42,0.15)" stroke="#c4922a" stroke-width="1.5"/>
+        <text x="130" y="295" text-anchor="middle" fill="#e8b84b" font-family="serif" font-size="14" font-weight="bold">AFRICA</text>
+        <text x="130" y="315" text-anchor="middle" fill="#d4b896" font-family="serif" font-size="11" font-style="italic">Schiavi</text>
+        <ellipse cx="570" cy="300" rx="90" ry="45" fill="rgba(196,146,42,0.15)" stroke="#c4922a" stroke-width="1.5"/>
+        <text x="570" y="295" text-anchor="middle" fill="#e8b84b" font-family="serif" font-size="14" font-weight="bold">AMERICHE</text>
+        <text x="570" y="315" text-anchor="middle" fill="#d4b896" font-family="serif" font-size="11" font-style="italic">Zucchero, oro, cotone</text>
+        <path d="M 270 100 Q 150 180 180 260" stroke="#c4922a" stroke-width="2.5" fill="none" marker-end="url(#arrow)" filter="url(#glow)"/>
+        <text x="175" y="180" fill="#f5e6c8" font-family="serif" font-size="11" font-style="italic" transform="rotate(-50,175,180)">merci europee</text>
+        <path d="M 220 300 Q 350 380 480 300" stroke="#7a1c1c" stroke-width="2.5" fill="none" marker-end="url(#arrow)" filter="url(#glow)"/>
+        <text x="350" y="375" fill="#f5e6c8" font-family="serif" font-size="11" font-style="italic" text-anchor="middle">Passaggio di Mezzo — 12 milioni di schiavi</text>
+        <path d="M 520 260 Q 520 180 430 100" stroke="#8b4513" stroke-width="2.5" fill="none" marker-end="url(#arrow)" filter="url(#glow)"/>
+        <text x="530" y="180" fill="#f5e6c8" font-family="serif" font-size="11" font-style="italic" transform="rotate(50,530,180)">materie prime</text>
+        <text x="350" y="210" text-anchor="middle" fill="rgba(196,146,42,0.3)" font-family="serif" font-size="48">△</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- CHIESA E DIRITTI -->
+<section id="chiesa" class="section-wrapper dark">
+  <div class="inner">
+    <div class="section-header" style="text-align:left; margin-bottom:2.5rem;">
+      <p class="section-tag" style="color:var(--bordeaux);">La Chiesa e i diritti degli indigeni</p>
+      <h2 class="heading">Il ruolo della Chiesa<br>e il dibattito sui diritti umani</h2>
+      <div class="divider" style="margin-left:0;"></div>
+    </div>
+    <div class="two-col reveal">
+      <div>
+        <h3 class="subheading" style="margin-top:0;">La posizione della Chiesa</h3>
+        <p>La Chiesa cattolica ebbe un ruolo complesso nella colonizzazione. Da un lato, partecipò attivamente alla diffusione del cristianesimo, sostenendo la conversione degli indigeni e contribuendo alla costruzione di missioni e chiese.</p>
+        <p>Dall'altro lato, alcuni membri della Chiesa si opposero apertamente alle violenze e allo sfruttamento. Tra questi spicca <strong>Bartolomé de Las Casas</strong> (1484–1566), un frate domenicano che aveva vissuto in prima persona la colonizzazione delle Antille e aveva assistito agli orrori dell'encomienda.</p>
+        <div class="pull-quote">
+          Las Casas denunciò gli abusi dei coloni alle corti spagnole, scrisse testimonianze dirette degli orrori, e sostenne per tutta la vita che gli indigeni erano esseri umani a tutti gli effetti, con gli stessi diritti dei cristiani.
+        </div>
+        <p>La sua opera più famosa, la <em>Brevísima relación de la destrucción de las Indias</em> (1542), descrisse in dettaglio i massacri e le torture subite dagli indigeni, creando scandalo in Europa. Grazie anche alle sue denunce, in Europa si iniziò a discutere della legittimità della conquista. Tuttavia, nella pratica, le condizioni di vita nelle colonie cambiarono poco.</p>
+      </div>
+      <div>
+        <h3 class="subheading" style="margin-top:0;">Il dibattito di Valladolid (1550–1551)</h3>
+        <p>Nel Cinquecento nacque un importante dibattito in Europa sulla natura degli indigeni. Due posizioni si contrapposero nettamente:</p>
+        <p><strong>Juan Ginés de Sepúlveda</strong> sosteneva che gli indigeni fossero esseri inferiori per natura — chiamandoli "barbari" — e che quindi potessero essere legittimamente sottomessi e sfruttati dagli europei. Si appoggiava alla filosofia aristotelica della "schiavitù naturale".</p>
+        <p><strong>Bartolomé de Las Casas</strong>, invece, sosteneva con forza che gli indigeni fossero esseri umani a tutti gli effetti, dotati di ragione e dignità, e che la conquista violenta fosse moralmente illegittima. Chiedeva la conversione tramite la parola e l'esempio, non la forza.</p>
+        <p>Questo dibattito rappresenta uno dei primi momenti nella storia in cui si riflette seriamente sui diritti umani. Anche se non portò a cambiamenti immediati, fu un passo importante nello sviluppo del pensiero moderno.</p>
+        <div class="pull-quote">
+          Il filosofo Michel de Montaigne sosteneva che ogni cultura dovesse essere compresa nel proprio contesto, senza giudicarla secondo criteri europei — anticipando il concetto di relativismo culturale.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRATTA SCHIAVI -->
+<section id="tratta" class="section-wrapper">
+  <div class="inner">
+    <div class="section-header" style="text-align:left; margin-bottom:2.5rem;">
+      <p class="section-tag" style="color:var(--bordeaux);">Una tragedia globale</p>
+      <h2 class="heading">La tratta degli schiavi africani</h2>
+      <div class="divider" style="margin-left:0;"></div>
+    </div>
+    <div class="two-col reveal">
+      <div>
+        <p>Con il drastico calo della popolazione indigena, gli europei iniziarono a cercare nuova manodopera. La soluzione fu tragica: iniziarono a deportare schiavi dall'Africa.</p>
+        <p>Nacque così la <strong>tratta atlantica degli schiavi</strong>, un sistema che coinvolse milioni di persone. Gli africani venivano catturati — spesso in seguito a guerre tra tribù fomentate dagli europei — venduti e trasportati nelle Americhe in condizioni terribili. Nelle stive delle navi, spesso ammassati senza possibilità di muoversi, senza cibo sufficiente. Molti morivano durante il viaggio, noto come il <em>Passaggio di Mezzo</em>.</p>
+        <div class="stat-block">
+          <div class="stat-card">
+            <span class="stat-number">12M+</span>
+            <span class="stat-label">Africani deportati tra il XVI e il XIX secolo</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">~2M</span>
+            <span class="stat-label">Morti durante la traversata atlantica</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p>Una volta arrivati, gli schiavi venivano venduti e destinati a lavorare nelle piantagioni di <strong>zucchero, caffè, cotone e tabacco</strong>, o nelle miniere. Le condizioni di lavoro erano brutali: nessun diritto, nessuna libertà, punizioni corporali, separazione forzata dalle famiglie.</p>
+        <p>Il sistema faceva parte del commercio triangolare: dall'Europa partivano prodotti manifatturieri verso l'Africa (armi, tessuti, alcol), dall'Africa gli schiavi venivano portati in America dopo essere stati acquistati, e dalle Americhe tornavano in Europa materie prime come zucchero, cotone e tabacco. Un ciclo economico costruito interamente sulla disumanizzazione.</p>
+        <div class="pull-quote">
+          La tratta atlantica degli schiavi rappresenta uno dei capitoli più drammatici e vergognosi della storia umana — un sistema che trasformò esseri umani in merce e costruì le fortune di interi paesi su sangue e dolore.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPATTO AMBIENTALE E RIFLESSIONI -->
+<section class="section-wrapper dark">
+  <div class="inner">
+    <div class="two-col reveal">
+      <div>
+        <p class="section-tag" style="color:var(--bordeaux);">Riflessioni culturali</p>
+        <h2 class="heading" style="margin-bottom:1.5rem;">Un nuovo sguardo<br>sul mondo</h2>
+        <p>L'incontro con popoli e culture diverse portò anche a importanti riflessioni culturali. Alcuni pensatori europei iniziarono a mettere in discussione l'idea che la propria civiltà fosse superiore a tutte le altre.</p>
+        <p>Il filosofo Michel de Montaigne sosteneva che ogni cultura dovesse essere compresa nel proprio contesto, senza giudicarla secondo criteri europei. Questa idea anticipa il concetto moderno di relativismo culturale.</p>
+        <p>Queste riflessioni contribuirono a cambiare il modo di vedere il mondo e l'umanità, preparando il terreno per l'Illuminismo e per le future dichiarazioni dei diritti.</p>
+      </div>
+      <div>
+        <p class="section-tag" style="color:var(--bordeaux);">Impatto ambientale</p>
+        <h2 class="heading" style="margin-bottom:1.5rem;">La trasformazione<br>del paesaggio naturale</h2>
+        <p>La colonizzazione e l'espansione europea non modificarono solo le società umane, ma anche l'ambiente naturale dei territori conquistati. La creazione di piantagioni e miniere portò alla deforestazione di ampie zone e alla distruzione di ecosistemi locali.</p>
+        <p>Colture come la canna da zucchero, il caffè e il cotone modificarono i paesaggi e i sistemi agricoli locali, mentre animali europei come cavalli, bovini e maiali cambiarono l'alimentazione e l'equilibrio ecologico delle regioni americane.</p>
+        <p>Questo impatto ambientale fu duraturo e contribuì a trasformare radicalmente il rapporto tra uomo e natura nei nuovi mondi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOCI DAL PASSATO -->
+<section id="voci" class="map-section">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-header">
+      <p class="section-tag">Prospettive storiche</p>
+      <h2 class="section-title" style="color:var(--parchment);">Voci dal passato</h2>
+      <div class="divider"></div>
+      <p style="color:#c8b090; margin-top:1rem; font-style:italic; font-size:0.95rem;">Monologhi immaginari basati su fonti storiche documentate</p>
+    </div>
+    <div class="voices-grid">
+      <div class="voice-card">
+        <span class="voice-icon">⚔️</span>
+        <div class="voice-role">Conquistador spagnolo, 1521</div>
+        <div class="voice-name">Hernán Cortés</div>
+        <div class="voice-text">"Siamo venuti a portare la civiltà e la fede vera. Tenochtitlán è caduta. Questo oro e questo argento serviranno la gloria di Spagna e di Dio. I vinti devono imparare la nostra lingua, la nostra legge."</div>
+      </div>
+      <div class="voice-card">
+        <span class="voice-icon">🌽</span>
+        <div class="voice-role">Nobile azteco sopravvissuto, 1521</div>
+        <div class="voice-name">Anonimo</div>
+        <div class="voice-text">"Tenochtitlán brucia. I templi vengono abbattuti. Ci tolgono il mais, l'oro, la dignità. I nostri dei tacciono, le nostre storie vengono bruciate. Siamo stranieri nella nostra stessa terra."</div>
+      </div>
+      <div class="voice-card">
+        <span class="voice-icon">✝️</span>
+        <div class="voice-role">Frate domenicano, 1542</div>
+        <div class="voice-name">Bartolomé de Las Casas</div>
+        <div class="voice-text">"Ho visto cose che nessun cristiano dovrebbe vedere. Ho visto bambini fatti a pezzi per i cani. Ho visto uomini bruciati vivi. Questi non sono barbari: siamo noi. Li porterò alla fede con la parola, non con il ferro."</div>
+      </div>
+      <div class="voice-card">
+        <span class="voice-icon">⛓️</span>
+        <div class="voice-role">Schiavo africano deportato, XVI sec.</div>
+        <div class="voice-name">Anonimo</div>
+        <div class="voice-text">"Ci hanno strappato dalla nostra terra, incatenati nelle stive buie. Quelli che morivano venivano gettati in mare. Arrivati nell'isola, ci hanno divisi, venduti come bestiame. Il mio nome è stato dimenticato."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURIOSITÀ -->
+<section id="curiosita">
+  <div style="max-width:1100px; margin:0 auto; padding:5rem 2rem;">
+    <div class="section-header">
+      <p class="section-tag" style="color:var(--bordeaux);">Fatti straordinari</p>
+      <h2 class="heading" style="text-align:center;">Curiosità storiche</h2>
+      <div class="divider"></div>
+      <p style="text-align:center; margin-top:1rem; color:var(--ash); font-style:italic;">Clicca sulle card per scoprire il retro</p>
+    </div>
+    <div class="cards-grid">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon">🐎</span>
+            <div class="flip-title">I cavalli in America</div>
+            <div class="flip-hint">Tocca per scoprire →</div>
+          </div>
+          <div class="flip-back">
+            <p>Prima dell'arrivo degli europei, i cavalli non esistevano in America. Erano estinti da millenni. Quando gli spagnoli li portarono, rivoluzionarono la vita di molte popolazioni indigene, soprattutto nelle grandi pianure del Nord America, dove i Comanche e i Sioux divennero abilissimi cavalieri.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon">🍫</span>
+            <div class="flip-title">Il cacao, da bevanda sacra a dolce europeo</div>
+            <div class="flip-hint">Tocca per scoprire →</div>
+          </div>
+          <div class="flip-back">
+            <p>Per le civiltà come gli Aztechi, il cacao era una bevanda preziosa e sacra, riservata ai guerrieri e ai nobili, spesso mescolata a peperoncino e spezie. In Europa venne prima aggiunto lo zucchero, poi trasformato nel cioccolato solido che conosciamo oggi.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon">⚖️</span>
+            <div class="flip-title">Le origini dei diritti umani</div>
+            <div class="flip-hint">Tocca per scoprire →</div>
+          </div>
+          <div class="flip-back">
+            <p>Il dibattito di Valladolid (1550–1551) tra Las Casas e Sepúlveda è considerato uno dei primi momenti nella storia in cui si parla formalmente di diritti umani. Fu il primo grande processo filosofico-legale sulla dignità degli esseri umani non-europei.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon">🌍</span>
+            <div class="flip-title">L'inizio della globalizzazione</div>
+            <div class="flip-hint">Tocca per scoprire →</div>
+          </div>
+          <div class="flip-back">
+            <p>Molti storici considerano questo periodo come l'inizio della globalizzazione, perché per la prima volta il mondo diventò davvero interconnesso: merci, persone, idee, piante e animali iniziarono a circolare su scala planetaria.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon">🦠</span>
+            <div class="flip-title">L'arma invisibile</div>
+            <div class="flip-hint">Tocca per scoprire →</div>
+          </div>
+          <div class="flip-back">
+            <p>Gli storici stimano che le malattie europee — soprattutto il vaiolo — abbiano causato più morti tra gli indigeni americani di tutte le guerre e le violenze messe insieme. In alcune isole dei Caraibi, la popolazione indigena si azzerò completamente in meno di 50 anni.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="flip-icon">🌽</span>
+            <div class="flip-title">La rivoluzione alimentare europea</div>
+            <div class="flip-hint">Tocca per scoprire →</div>
+          </div>
+          <div class="flip-back">
+            <p>Prima delle scoperte geografiche, gli europei non conoscevano patate, pomodori, mais, cacao, fagioli, peperoni, zucchine, tacchino, ananas. Questi alimenti, tutti americani, trasformarono radicalmente la cucina e la dieta dell'Europa intera.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOSSARIO -->
+<section id="glossario" class="map-section">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-header">
+      <p class="section-tag">Termini chiave</p>
+      <h2 class="section-title" style="color:var(--parchment);">Glossario storico</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="glossary-grid">
+      <div class="glossary-item" onclick="this.classList.toggle('open')">
+        <div class="glossary-term">Encomienda</div>
+        <div class="glossary-def">Sistema coloniale spagnolo con cui gruppi di indigeni venivano "affidati" a un colono europeo (encomendero). In teoria, il colono doveva proteggerli e istruirli nella fede cristiana. In pratica, era una forma di lavoro forzato che spesso sfociava in vera e propria schiavitù.</div>
+      </div>
+      <div class="glossary-item" onclick="this.classList.toggle('open')">
+        <div class="glossary-term">Scambio colombiano</div>
+        <div class="glossary-def">Termine coniato dallo storico Alfred Crosby per descrivere il trasferimento su vasta scala di piante, animali, cultura, popolazioni, tecnologie e idee tra le Americhe e il Vecchio Mondo (Europa, Africa, Asia) a seguito del viaggio di Colombo del 1492.</div>
+      </div>
+      <div class="glossary-item" onclick="this.classList.toggle('open')">
+        <div class="glossary-term">Commercio triangolare</div>
+        <div class="glossary-def">Sistema di scambi commerciali tra Europa, Africa e Americhe: l'Europa esportava merci manufatte in Africa, l'Africa forniva schiavi alle Americhe, e le Americhe inviavano materie prime in Europa. Un ciclo economico basato sulla tratta degli schiavi.</div>
+      </div>
+      <div class="glossary-item" onclick="this.classList.toggle('open')">
+        <div class="glossary-term">Vicereame</div>
+        <div class="glossary-def">Divisione amministrativa dei territori coloniali spagnoli, governata da un viceré che rappresentava direttamente la corona spagnola. I principali erano il Vicereame della Nuova Spagna (Messico) e il Vicereame del Perù (Sud America).</div>
+      </div>
+      <div class="glossary-item" onclick="this.classList.toggle('open')">
+        <div class="glossary-term">Passaggio di Mezzo</div>
+        <div class="glossary-def">La traversata atlantica che gli schiavi africani erano costretti a compiere dalle coste africane alle Americhe, stipati nelle stive delle navi negriere in condizioni disumane. Si stima che circa il 15–20% degli schiavi morisse durante il viaggio.</div>
+      </div>
+      <div class="glossary-item" onclick="this.classList.toggle('open')">
+        <div class="glossary-term">Conquistadores</div>
+        <div class="glossary-def">Soldati e avventurieri spagnoli e portoghesi che condussero le campagne militari di conquista delle Americhe nel XV e XVI secolo. Agivano spesso per conto della corona, in cambio di una parte del bottino e del diritto di governare i territori conquistati.</div>
+      </div>
+      <div class="glossary-item" onclick="this.classList.toggle('open')">
+        <div class="glossary-term">Relativismo culturale</div>
+        <div class="glossary-def">Principio filosofico secondo cui ogni cultura deve essere valutata e compresa nel proprio contesto, senza applicare i valori o i criteri di giudizio di un'altra cultura. Anticipato da Montaigne nel XVI secolo, divenne fondamentale nell'antropologia moderna del XX secolo.</div>
+      </div>
+      <div class="glossary-item" onclick="this.classList.toggle('open')">
+        <div class="glossary-term">Trattato di Tordesillas</div>
+        <div class="glossary-def">Accordo del 1494 tra Spagna e Portogallo, mediato dal Papa Alessandro VI, che divideva il mondo in due sfere di influenza. Una linea immaginaria nel mezzo dell'Atlantico assegnava i territori a est al Portogallo e quelli a ovest alla Spagna.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-title">Le Scoperte Geografiche</div>
+  <p style="margin-bottom:0.5rem;">Colonizzazione, Sterminio e Conseguenze — XV–XVII Secolo</p>
+  <div class="divider" style="margin: 1rem auto;"></div>
+  <p>Elaborato scolastico — Montemurro · Giro · Iovu · Palladino</p>
+</footer>
+
+<script src="/Javascript/script.js"></script>
 </body>
 </html>
