@@ -1,27 +1,48 @@
-const panelTop = document.getElementById('panelTop');
-const panelBottom = document.getElementById('panelBottom');
-const panelLeft = document.getElementById('panelLeft');
-const panelRight = document.getElementById('panelRight');
+const panels = {
+  top: document.getElementById('panelTop'),
+  bottom: document.getElementById('panelBottom'),
+  left: document.getElementById('panelLeft'),
+  right: document.getElementById('panelRight'),
+};
+
 const navbar = document.getElementById('navbar');
 
-window.addEventListener('scroll', () => {
+let ticking = false;
+
+function animatePanels() {
   const scrollY = window.scrollY;
-  const maxScroll = document.body.scrollHeight - window.innerHeight;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
 
-  const progress = maxScroll > 0 ? scrollY / maxScroll : 0;
+  // Evita divisioni strane
+  const progress = Math.min(scrollY / maxScroll, 1);
 
-  // Riduce i pannelli dal 50% fino a 0%
-  const size = 50 - progress * 50;
+  // Movimento più smooth
+  const eased = 1 - Math.pow(1 - progress, 3);
 
-  panelTop.style.height = size + '%';
-  panelBottom.style.height = size + '%';
-  panelLeft.style.width = size + '%';
-  panelRight.style.width = size + '%';
+  // Da 50% → 0%
+  const size = Math.max(50 - eased * 50, 0);
 
-  // Mostra navbar quando quasi tutto è scrollato
-  if (progress > 0.95) {
-    navbar.classList.add('visible');
-  } else {
-    navbar.classList.remove('visible');
+  // Applica trasformazioni
+  panels.top.style.height = `${size}%`;
+  panels.bottom.style.height = `${size}%`;
+  panels.left.style.width = `${size}%`;
+  panels.right.style.width = `${size}%`;
+
+  // Navbar con fade elegante
+  navbar.classList.toggle('visible', progress > 0.92);
+
+  ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      animatePanels();
+    });
+
+    ticking = true;
   }
 });
+
+// Esegui subito al caricamento
+animatePanels();
