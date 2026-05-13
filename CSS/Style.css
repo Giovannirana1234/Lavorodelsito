@@ -1,7 +1,81 @@
 body {
-    background-color: lightblue;
-}
-
-h1 {
-    color: red;
-}
+      height: 300vh;
+    }
+ 
+    /* FOTO: fissa dietro tutto */
+    .bg-photo {
+      position: fixed;
+      inset: 0;
+      background-image: url('/IndexPhotos/Index\ Photo.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+ 
+    /* I 4 PANNELLI NERI */
+    .panel {
+      position: fixed;
+      background: black;
+      z-index: 10;
+    }
+ 
+    .panel-top    { top: 0; left: 0; right: 0; height: 50%; }
+    .panel-bottom { bottom: 0; left: 0; right: 0; height: 50%; }
+    .panel-left   { top: 0; bottom: 0; left: 0; width: 50%; }
+    .panel-right  { top: 0; bottom: 0; right: 0; width: 50%; }
+ 
+    /* NAVBAR: sta sopra a tutto, invisibile all'inizio */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 20;                /* sopra ai pannelli neri */
+ 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+ 
+      /* sfondo leggermente scuro per leggibilità sulla foto */
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(6px);
+ 
+      /* animazione comparsa */
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      pointer-events: none;       /* non cliccabile quando è nascosta */
+    }
+ 
+    /* Classe aggiunta dallo JS quando i pannelli sono spariti */
+    .navbar.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+ 
+    .navbar .logo {
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+    }
+ 
+    .navbar nav {
+      display: flex;
+      gap: 2rem;
+    }
+ 
+    .navbar nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+ 
+    .navbar nav a:hover {
+      opacity: 1;
+    }
